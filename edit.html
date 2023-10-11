@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function edityo() {
+      var check = confirm("게시물을 수정할까요?");
+      if (check == true) {
+        alert("수정되었습니다.");
+      }
+    }
+  </script>
+  <body>
+    <form action="add.html" method="post" name="frm" onsubmit="return edityo()">
+      <fieldset style="width: 600px; margin: 15px">
+        Movie Title: <input type="text" name="title" value="30일"/> 
+      </br></br>
+      Movie Genre: <input type="text" name="genre" value="로맨스 코미디"/>
+    </br></br>
+    Date: <input type="date" name="date" value="2023-10-03"/>
+  </br></br>
+  Summary: </br>
+  <textarea name="summary" cols="70" rows="5">“완벽한 저에게 신은 저 여자를 던지셨죠”</textarea>
+</br></br> 
+      </fieldset>
+      <input style="margin-left: 20px" type="submit" value="수정"/>
+    </form>
+    <script src="view.js"></script>
+  </body>
+</html>

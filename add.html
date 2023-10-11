@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+  function Checkform() {
+
+    if( frm.title.value == "" ) {
+    
+        frm.title.focus();
+        alert("Please enter Movie Title.");
+        
+        return false;
+        
+    }
+    if( frm.genre.value == "" ) {
+    
+    frm.genre.focus();
+    alert("Please enter Movie Genre.");
+    
+    return false;
+    
+}
+if( frm.date.value == "" ) {
+    
+    frm.date.focus();
+    alert("Please enter Date.");
+    
+    return false;
+    
+}
+if( frm.summary.value == "" ) {
+    
+    frm.summary.focus();
+    alert("Please enter Summary.");
+    
+    return false;
+    
+}
+else{
+  alert("게시물이 추가됩니다.")
+}
+}</script>
+  <body>
+    
+    <form action="add.html" method="post" name="frm" onSubmit="return Checkform()">
+      <fieldset style="width: 600px; margin: 15px">
+        Movie Title: <input type="text" name="title" id="result"/> 
+      </br></br>
+      Movie Genre: <input type="text" name="genre" />
+    </br></br>
+    Date: <input type="date" name="date"/>
+  </br></br>
+  Summary: </br>
+  <textarea name="summary" cols="70" rows="5"></textarea>
+</br></br> 
+      </fieldset>
+      <input style="margin-left: 20px" type="submit" value="추가"/>
+    </form>
+  </body>
+</html>

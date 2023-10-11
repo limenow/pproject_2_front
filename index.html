@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <img src="./img/movieicon.png" width="50px" height="50px" />
+        <h2>Now showing</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Corporation</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="container">
+      <div class="middle">
+        <div class="table-layout">
+          <table>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Summary</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="first">1</td>
+                <td>
+                  <img src="./img/30일.jpeg" width="150px" height="200px" />
+                </td>
+                <td><a onclick="location.href=`view.html`"> 30일</a></td>
+                <td>로맨스 코미디</td>
+                <td>“완벽한 저에게 신은 저 여자를 던지셨죠”</td>
+                <td>2023-10-03</td>
+              </tr>
+              <tr>
+                <td id="second">2</td>
+                <td>
+                  <img src="./img/천박사.jpeg" width="150px" height="200px" />
+                </td>
+                <td>
+                  <a onclick="location.href=`view.html`"> 천박사 퇴마 연구소</a>
+                </td>
+                <td>다크 판타지</td>
+                <td>"귀신을 믿지 않는 가짜 퇴마사!"</td>
+                <td>2023-09-27</td>
+              </tr>
+              <tr>
+                <td id="third">3</td>
+                <td>
+                  <img
+                    src="./img/크리에이터.jpeg"
+                    width="150px"
+                    height="200px"
+                  />
+                </td>
+                <td><a onclick="location.href=`view.html`"> 크리에이터</a></td>
+                <td>SF</td>
+                <td>"인간적인가, 인간의 적인가"</td>
+                <td>2023-10-03</td>
+              </tr>
+              <tr>
+                <td id="fourth">4</td>
+                <td>
+                  <img src="./img/화란.jpeg" width="150px" height="200px" />
+                </td>
+                <td><a onclick="location.href=`view.html`"> 화란</a></td>
+                <td>느와르</td>
+                <td>"지옥에서 벗어나기 위해 지옥이 되다"</td>
+                <td>2023-10-11</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="menu">
+            <li>
+              <button
+                type="button"
+                class="add"
+                onclick="location.href=`add.html`"
+              >
+                add
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <nav>
+        <a href="" target="_blank">Blog</a> |
+        <a href="" target="_blank">Github</a>
+      </nav>
+      <p>
+        <span>이메일 : 22200630@gmail.com</span><br />
+        <span>Copyright 2020. 22200630. All Rights Reserved.</span>
+      </p>
+    </footer>
+  </body>
+</html>
