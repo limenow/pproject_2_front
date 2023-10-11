@@ -3,62 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="my.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
   </head>
   <script>
-  function Checkform() {
-
-    if( frm.title.value == "" ) {
-    
-        frm.title.focus();
+    function Checkform() {
+      if (frm.field1.value == "") {
+        frm.field1.focus();
         alert("Please enter Movie Title.");
-        
+
         return false;
-        
+      }
+      if (frm.field2.value == "") {
+        frm.field2.focus();
+        alert("Please enter Movie Genre.");
+
+        return false;
+      }
+      if (frm.field3.value == "") {
+        frm.field3.focus();
+        alert("Please enter Date.");
+
+        return false;
+      }
+      if (frm.field4.value == "") {
+        frm.field4.focus();
+        alert("Please enter Summary.");
+
+        return false;
+      } else {
+        alert("게시물이 추가됩니다.");
+      }
     }
-    if( frm.genre.value == "" ) {
-    
-    frm.genre.focus();
-    alert("Please enter Movie Genre.");
-    
-    return false;
-    
-}
-if( frm.date.value == "" ) {
-    
-    frm.date.focus();
-    alert("Please enter Date.");
-    
-    return false;
-    
-}
-if( frm.summary.value == "" ) {
-    
-    frm.summary.focus();
-    alert("Please enter Summary.");
-    
-    return false;
-    
-}
-else{
-  alert("게시물이 추가됩니다.")
-}
-}</script>
+    let fileInput = document.getElementById("file-upload-input");
+    let fileSelect = document.getElementsByClassName("file-upload-select")[0];
+    fileSelect.onclick = function () {
+      fileInput.click();
+    };
+    fileInput.onchange = function () {
+      let filename = fileInput.files[0].name;
+      let selectName = document.getElementsByClassName("file-select-name")[0];
+      selectName.innerText = filename;
+    };
+  </script>
   <body>
-    
-    <form action="add.html" method="post" name="frm" onSubmit="return Checkform()">
-      <fieldset style="width: 600px; margin: 15px">
-        Movie Title: <input type="text" name="title" id="result"/> 
-      </br></br>
-      Movie Genre: <input type="text" name="genre" />
-    </br></br>
-    Date: <input type="date" name="date"/>
-  </br></br>
-  Summary: </br>
-  <textarea name="summary" cols="70" rows="5"></textarea>
-</br></br> 
-      </fieldset>
-      <input style="margin-left: 20px" type="submit" value="추가"/>
-    </form>
+    <div class="page">
+      <header>
+        <img src="./img/movieicon.png" width="50px" height="50px" />
+        <h2 onclick="location.href=`index.html`">Now showing</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Corporation</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="form-style-5">
+      <form
+        action="add.html"
+        method="post"
+        name="frm"
+        onSubmit="return Checkform()"
+      >
+        <fieldset>
+          <legend><span class="number">1</span> Candidate Info</legend>
+          <input type="text" name="field1" placeholder="Movie Title *" />
+          <input type="text" name="field2" placeholder="Movie Genre *" />
+          <input type="date" name="field3" placeholder="Date *" />
+          <textarea name="field4" placeholder="Summary"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend><span class="number">2</span> Movie Poster</legend>
+          <div class="file-upload">
+            <div class="file-upload-select">
+              <div class="file-select-button">Choose File</div>
+              <div class="file-select-name">No file chosen...</div>
+              <input
+                type="file"
+                name="file-upload-input"
+                id="file-upload-input"
+              />
+            </div>
+          </div>
+        </fieldset>
+        <input type="submit" value="ADD" onclick="location.href=`index.html`" />
+      </form>
+    </div>
   </body>
 </html>

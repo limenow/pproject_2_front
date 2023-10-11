@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="my.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
   </head>
   <script>
@@ -15,79 +15,47 @@
     }
   </script>
   <body>
-    <div class="table-layout">
-      <table border="3">
-        <caption>
-          Movie List
-          <ul class="menu">
-            <li>
-              <button
-                type="button"
-                class="edit"
-                onclick="location.href=`edit.html`"
-              >
-                edit
-              </button>
-            </li>
+    <div class="page">
+      <header>
+        <img src="./img/movieicon.png" width="50px" height="50px" />
+        <h2 onclick="location.href=`index.html`">Now showing</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Corporation</a></li>
           </ul>
-        </caption>
-        <thead>
+        </nav>
+      </header>
+    </div>
+    <div class="table-layout-view">
+      <div id="dvTitle"><h2>30일</h2></div>
+      <div id="dvMeta">
+        <table border="0">
           <tr>
-            <th>No.</th>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>Summary</th>
-            <th>Date</th>
-            <th>Option</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>30일</td>
-            <td>로맨스 코미디</td>
-            <td>“완벽한 저에게 신은 저 여자를 던지셨죠”</td>
-            <td>2023-10-03</td>
-            <td>
-              <button type="button" class="delete" onclick="deleteyo()">
-                delete
-              </button>
+            <td rowspan="4">
+              <img src="./img/30일.jpeg" id="imgPoster" />
             </td>
+            <td>Genre: 로맨스 코미디</td>
           </tr>
-          <!-- <tr>
-            <td>2</td>
-            <td>천박사 퇴마 연구소</td>
-            <td>다크 판타지</td>
-            <td>"귀신을 믿지 않는 가짜 퇴마사!"</td>
-            <td>2023-09-27</td>
-            <td>
-              <button type="button" class="delete" onclick="deleteyo()">
-                delete
-              </button>
-            </td>
+
+          <tr>
+            <td>Date: 2023-10-03</td>
           </tr>
           <tr>
-            <td>3</td>
-            <td>크리에이터</td>
-            <td>SF</td>
-            <td>"인간적인가, 인간의 적인가"</td>
-            <td>2023-10-03</td>
-            <td>
-              <button type="button" class="delete" onclick="deleteyo()">
-                delete
-              </button>
-            </td>
+            <td>Summary: “완벽한 저에게 신은 저 여자를 던지셨죠”</td>
           </tr>
-          <tr>
-            <td>4</td>
-            <td>화란</td>
-            <td>느와르</td>
-            <td>"지옥에서 벗어나기 위해 지옥이 되다"</td>
-            <td>2023-10-11</td>
-            <td><button type="button" class="delete">delete</button></td>
-          </tr> -->
-        </tbody>
-      </table>
+        </table>
+      </div>
+      <div class="button-container">
+        <button type="button" class="edit" onclick="location.href=`edit.html`">
+          edit
+        </button>
+        <button type="button" class="delete" onclick="deleteyo()">
+          delete
+        </button>
+      </div>
     </div>
   </body>
 </html>
